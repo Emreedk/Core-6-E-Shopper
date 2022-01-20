@@ -1,0 +1,11 @@
+C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_Entities\bin\Debug\net6.0\E_Shopper_Entities.deps.json
+C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_Entities\bin\Debug\net6.0\E_Shopper_Entities.dll
+C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_Entities\bin\Debug\net6.0\ref\E_Shopper_Entities.dll
+C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_Entities\bin\Debug\net6.0\E_Shopper_Entities.pdb
+C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_Entities\obj\Debug\net6.0\E_Shopper_Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_Entities\obj\Debug\net6.0\E_Shopper_Entities.AssemblyInfoInputs.cache
+C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_Entities\obj\Debug\net6.0\E_Shopper_Entities.AssemblyInfo.cs
+C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_Entities\obj\Debug\net6.0\E_Shopper_Entities.csproj.CoreCompileInputs.cache
+C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_Entities\obj\Debug\net6.0\E_Shopper_Entities.dll
+C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_Entities\obj\Debug\net6.0\ref\E_Shopper_Entities.dll
+C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_Entities\obj\Debug\net6.0\E_Shopper_Entities.pdb

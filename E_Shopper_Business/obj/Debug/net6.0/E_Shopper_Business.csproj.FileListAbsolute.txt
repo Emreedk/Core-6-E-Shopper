@@ -1,0 +1,17 @@
+C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_Business\bin\Debug\net6.0\E_Shopper_Business.deps.json
+C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_Business\bin\Debug\net6.0\E_Shopper_Business.dll
+C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_Business\bin\Debug\net6.0\ref\E_Shopper_Business.dll
+C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_Business\bin\Debug\net6.0\E_Shopper_Business.pdb
+C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_Business\bin\Debug\net6.0\E_Shopper_DataAccess.dll
+C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_Business\bin\Debug\net6.0\E_Shopper_Entities.dll
+C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_Business\bin\Debug\net6.0\E_Shopper_DataAccess.pdb
+C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_Business\bin\Debug\net6.0\E_Shopper_Entities.pdb
+C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_Business\obj\Debug\net6.0\E_Shopper_Business.csproj.AssemblyReference.cache
+C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_Business\obj\Debug\net6.0\E_Shopper_Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_Business\obj\Debug\net6.0\E_Shopper_Business.AssemblyInfoInputs.cache
+C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_Business\obj\Debug\net6.0\E_Shopper_Business.AssemblyInfo.cs
+C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_Business\obj\Debug\net6.0\E_Shopper_Business.csproj.CoreCompileInputs.cache
+C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_Business\obj\Debug\net6.0\E_Shopper_Business.csproj.CopyComplete
+C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_Business\obj\Debug\net6.0\E_Shopper_Business.dll
+C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_Business\obj\Debug\net6.0\ref\E_Shopper_Business.dll
+C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_Business\obj\Debug\net6.0\E_Shopper_Business.pdb
