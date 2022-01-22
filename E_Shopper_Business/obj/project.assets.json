@@ -613,6 +613,9 @@
       "E_Shopper_Entities/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.1"
+        },
         "compile": {
           "bin/placeholder/E_Shopper_Entities.dll": {}
         },
@@ -1798,7 +1801,8 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "E_Shopper_DataAccess >= 1.0.0",
-      "E_Shopper_Entities >= 1.0.0"
+      "E_Shopper_Entities >= 1.0.0",
+      "Microsoft.EntityFrameworkCore >= 6.0.1"
     ]
   },
   "packageFolders": {
@@ -1851,6 +1855,12 @@
     "frameworks": {
       "net6.0": {
         "targetAlias": "net6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[6.0.1, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

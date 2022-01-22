@@ -9,7 +9,8 @@
       "E_Shopper_Business/1.0.0": {
         "dependencies": {
           "E_Shopper_DataAccess": "1.0.0",
-          "E_Shopper_Entities": "1.0.0"
+          "E_Shopper_Entities": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "6.0.1"
         },
         "runtime": {
           "E_Shopper_Business.dll": {}
@@ -468,6 +469,9 @@
         }
       },
       "E_Shopper_Entities/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.1"
+        },
         "runtime": {
           "E_Shopper_Entities.dll": {}
         }

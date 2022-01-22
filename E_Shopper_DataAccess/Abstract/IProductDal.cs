@@ -10,6 +10,9 @@ namespace E_Shopper_DataAccess.Abstract
 {
     public interface IProductDal:IRepository<Product>
     {
-        IEnumerable<Product> GetPopularProduct();
+        List<Product> GetProductsByCategory(string category,int page,int pageSize);
+
+        Product GetProductDetails(int id);
+        int GetCountByCategory(string category);
     }
 }

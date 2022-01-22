@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace E_Shopper_Entities
 {
-    internal class OrderLine
+    public class OrderLine
     {
 
     }

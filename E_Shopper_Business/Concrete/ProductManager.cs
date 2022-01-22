@@ -30,7 +30,7 @@ namespace E_Shopper_Business.Concrete
 
         public List<Product> GetAll()
         {
-           return _productDal.GetAll().ToList();
+           return _productDal.GetAll();
         }
 
         public Product GetById(int id)
@@ -38,9 +38,24 @@ namespace E_Shopper_Business.Concrete
             return _productDal.GetById(id);
         }
 
+        public List<Product> GetProductsByCategory(string category,int page,int pageSize)
+        {
+            return _productDal.GetProductsByCategory(category,page,pageSize);
+        }
+
+        public Product GetProductDetails(int id)
+        {
+            return _productDal.GetProductDetails(id);
+        }
+
         public void Update(Product entity)
         {
             _productDal.Update(entity);
+        }
+
+        public int GetCountByCategory(string category)
+        {
+            return _productDal.GetCountByCategory(category);
         }
     }
 }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace E_Shopper_DataAccess.Concrete.EfCore
 {
-    internal class EfCoreCategoryDal : EfCoreGenericRepository<Category, ShopContext>, ICategoryDal
+    public class EfCoreCategoryDal : EfCoreGenericRepository<Category, ShopContext>, ICategoryDal
     {
       
     }

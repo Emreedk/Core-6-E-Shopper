@@ -1,32 +1,31 @@
-﻿using E_Shopper_UI.Models;
+﻿using E_Shopper_Business.Abstract;
+using E_Shopper_UI.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
 
 namespace E_Shopper_UI.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        #region Injection 
+        //Program.cs
+        //IProductService => ProductManager => IProductDal => MemoryProductDal
 
-        public HomeController(ILogger<HomeController> logger)
+        private IProductService _productService;
+
+        public HomeController(IProductService productService)
         {
-            _logger = logger;
+            _productService = productService;
         }
+        #endregion
 
         public IActionResult Index()
         {
-            return View();
-        }
+            //return View(_productService.GetAll());//Direk çekmek yerine Model ile ulaşım sağlayalım
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View(new ProductListModel()
+            {
+                Products = _productService.GetAll()
+            });
         }
     }
 }

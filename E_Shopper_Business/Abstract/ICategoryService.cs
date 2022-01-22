@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace E_Shopper_Business.Abstract
 {
-    internal interface ICategoryService
+    public interface ICategoryService
     {
         List<Category> GetAll();
 

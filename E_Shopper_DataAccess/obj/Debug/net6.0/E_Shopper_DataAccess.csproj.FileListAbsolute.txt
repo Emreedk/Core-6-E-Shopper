@@ -13,3 +13,5 @@ C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_DataAccess\obj\Debug
 C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_DataAccess\obj\Debug\net6.0\E_Shopper_DataAccess.dll
 C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_DataAccess\obj\Debug\net6.0\ref\E_Shopper_DataAccess.dll
 C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_DataAccess\obj\Debug\net6.0\E_Shopper_DataAccess.pdb
+C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_DataAccess\bin\Debug\net6.0\E_Shopper_DataAccess.runtimeconfig.json
+C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_DataAccess\obj\Debug\net6.0\E_Shopper_DataAccess.genruntimeconfig.cache

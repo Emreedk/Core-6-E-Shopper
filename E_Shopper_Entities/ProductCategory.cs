@@ -8,8 +8,7 @@ namespace E_Shopper_Entities
 {
     public class ProductCategory
     {
-        public int Id { get; set; }
-
+        //Id ler PK olacak ki aynı ürün aynı category eşleşmesin
         public int CategoryId { get; set; }
         public Category Category { get; set; }
 
