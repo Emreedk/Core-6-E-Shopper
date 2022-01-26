@@ -57,5 +57,15 @@ namespace E_Shopper_Business.Concrete
         {
             return _productDal.GetCountByCategory(category);
         }
+
+        public Product GetByWithCategories(int id)
+        {
+           return _productDal.GetByWithCategories(id);
+        }
+
+        public void Update(Product entity, int[] categoryIds)
+        {
+            _productDal.Update(entity, categoryIds);
+        }
     }
 }

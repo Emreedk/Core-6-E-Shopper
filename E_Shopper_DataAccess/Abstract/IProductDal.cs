@@ -14,5 +14,7 @@ namespace E_Shopper_DataAccess.Abstract
 
         Product GetProductDetails(int id);
         int GetCountByCategory(string category);
+        Product GetByWithCategories(int id);
+        void Update(Product entity, int[] categoryIds);
     }
 }

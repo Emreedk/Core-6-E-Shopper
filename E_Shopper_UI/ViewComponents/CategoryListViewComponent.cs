@@ -6,6 +6,7 @@ namespace E_Shopper_UI.ViewComponents
 {
     public class CategoryListViewComponent:ViewComponent
     {
+
         private ICategoryService _categoryService;
 
         public CategoryListViewComponent(ICategoryService categoryService)
@@ -16,7 +17,7 @@ namespace E_Shopper_UI.ViewComponents
         {
             return View(new CategoryListViewModel()
             {
-                SelectedCategory = RouteData.Values["category"]?.ToString(),
+                SelectedCategory=RouteData.Values["category"]?.ToString(),
                 Categories = _categoryService.GetAll()
             });
         }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vOI9aZl8sgdyLLgOt6La6EvKe1o2AoJqrIYO8A5iHcE=",
+  "Hash": "I7rp1g+HNzUd+ncUS6UdSfLxoYPP6PmDTqnVAFAFUR8=",
   "Source": "E_Shopper_UI",
   "BasePath": "_content/E_Shopper_UI",
   "Mode": "Default",
@@ -202,6 +202,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\7.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\emree\\Desktop\\E_Shopper_Core_6\\E_Shopper\\E_Shopper_UI\\wwwroot\\img\\mlle3tua-apple-iphone-13-pro-max-256gb-sierra-mavisi-637678441347118417.jpg",
+      "SourceId": "E_Shopper_UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\emree\\Desktop\\E_Shopper_Core_6\\E_Shopper\\E_Shopper_UI\\wwwroot\\",
+      "BasePath": "_content/E_Shopper_UI",
+      "RelativePath": "img/mlle3tua-apple-iphone-13-pro-max-256gb-sierra-mavisi-637678441347118417.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\mlle3tua-apple-iphone-13-pro-max-256gb-sierra-mavisi-637678441347118417.jpg"
     },
     {
       "Identity": "C:\\Users\\emree\\Desktop\\E_Shopper_Core_6\\E_Shopper\\E_Shopper_UI\\wwwroot\\img\\slider1.png",
