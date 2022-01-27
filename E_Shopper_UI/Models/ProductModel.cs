@@ -13,7 +13,9 @@ namespace E_Shopper_UI.Models
         public string Description { get; set; }
 
         [Range(1, 30000)]
+        [Required(ErrorMessage ="Fiyat Belirtiniz")]
         public decimal? Price { get; set; }
+
 
         public List<Category> SelectedCategories { get; set; }
     }

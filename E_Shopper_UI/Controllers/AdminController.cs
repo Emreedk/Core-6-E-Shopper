@@ -1,10 +1,12 @@
 ﻿using E_Shopper_Business.Abstract;
 using E_Shopper_Entities;
 using E_Shopper_UI.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace E_Shopper_UI.Controllers
 {
+    [Authorize]
     public class AdminController : Controller
     {
         private IProductService _productService;
@@ -68,20 +70,21 @@ namespace E_Shopper_UI.Controllers
             {
                 return NotFound();
             }
-
             var entity = _productService.GetByWithCategories((int)id);
-            if(entity == null)
+
+            if (entity == null)
             {
                 return NotFound();
             }
+
             var model = new ProductModel()
             {
                 Id = entity.Id,
                 Name = entity.Name,
                 Price = entity.Price,
-                ImageUrl = entity.ImageUrl,
                 Description = entity.Description,
-                SelectedCategories = entity.ProductCategories.Select(i=> i.Category).ToList()
+                ImageUrl = entity.ImageUrl,
+                SelectedCategories = entity.ProductCategories.Select(i => i.Category).ToList()
             };
 
             ViewBag.Categories = _categoryService.GetAll();
@@ -90,21 +93,18 @@ namespace E_Shopper_UI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> EditProduct(ProductModel model, int[]categoryIds, IFormFile file)
+        public async Task<IActionResult> EditProduct(ProductModel model, int[] categoryIds, IFormFile file)
         {
-            ModelState.Remove("SelectedCategories");
             ModelState.Remove("file");
             if (ModelState.IsValid)
             {
-                var entity = _productService.GetById(model.Id);
-
+                var entity = _productService.GetByWithCategories(model.Id);
                 if (entity == null)
                 {
                     return NotFound();
                 }
-                entity.Id = model.Id;
                 entity.Name = model.Name;
-                entity.Price = model.Price;                
+                entity.Price = model.Price;
                 entity.Description = model.Description;
 
                 if (file != null)
@@ -112,7 +112,7 @@ namespace E_Shopper_UI.Controllers
                     entity.ImageUrl = file.FileName;
 
                     var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot\\img", file.FileName);
-                    using(var stream = new FileStream(path, FileMode.Create))
+                    using (var stream = new FileStream(path, FileMode.Create))
                     {
                         await file.CopyToAsync(stream);
                     }
@@ -122,8 +122,6 @@ namespace E_Shopper_UI.Controllers
 
                 return RedirectToAction("ProductList");
             }
-
-
             ViewBag.Categories = _categoryService.GetAll();
             return View(model);
         }

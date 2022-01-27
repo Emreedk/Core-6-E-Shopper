@@ -422,6 +422,12 @@
     <None Include="node_modules\jquery\src\var\support.js" />
     <None Include="node_modules\jquery\src\var\toString.js" />
     <None Include="node_modules\jquery\src\wrap.js" />
+    <None Include="Views\Admin\CategoryList.cshtml" />
+    <None Include="Views\Admin\CreateCategory.cshtml" />
+    <None Include="Views\Admin\CreateProduct.cshtml" />
+    <None Include="Views\Admin\EditCategory.cshtml" />
+    <None Include="Views\Admin\EditProduct.cshtml" />
+    <None Include="Views\Admin\ProductList.cshtml" />
     <None Include="Views\Home\Index.cshtml" />
     <None Include="Views\Home\Privacy.cshtml" />
     <None Include="Views\Shared\Components\CategoryList\Default.cshtml" />
@@ -438,6 +444,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.1">
       <PrivateAssets>all</PrivateAssets>
@@ -447,6 +454,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.1" />
   </ItemGroup>
 
   <ItemGroup>
