@@ -1,6 +1,9 @@
-﻿using E_Shopper_UI.Identity;
+﻿using E_Shopper_UI.EmailServices;
+using E_Shopper_UI.Extensions;
+using E_Shopper_UI.Identity;
 using E_Shopper_UI.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace E_Shopper_UI.Controllers
@@ -10,12 +13,13 @@ namespace E_Shopper_UI.Controllers
     {
         private UserManager<ApplicationUser> _userManager;
         private SignInManager<ApplicationUser> _signInManager;
+        private IEmailSender _emailSender;
 
-
-        public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
+        public AccountController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IEmailSender emailSender)
         {
             _signInManager = signInManager;
             _userManager = userManager;
+            _emailSender = emailSender;
         }
         public IActionResult Register()
         {
@@ -51,6 +55,19 @@ namespace E_Shopper_UI.Controllers
                 });
 
                 //send email
+                //await _emailSender.SendEmailAsync(model.Email, "Hesabınızı Onaylayınız",$"Lütfen email hesabınızı onaylamak için linke <a href='https://localhost:44386{callbackUrl}'> tıklayınız.</a>");
+
+                string Uri = "https://localhost:44318";
+                string activateUri = $"{Uri}{callbackUrl}";
+                string body=$"Lütfen email hesabınızı onaylamak için linke <a href='https://localhost:44318{callbackUrl}'> tıklayınız.</a>";
+                MailHelper.SendMail(body, model.Email, "EShopper Hesap Aktifleştirme");
+
+                TempData.Put("message", new ResultMessage()
+                {
+                    Title = "Hesap Onayı",
+                    Message = "Email adresinize gelen link ile hesabınızı aktifleştiriniz",
+                    Css = "warning"
+                });
 
                 return RedirectToAction("login", "Account");
             }
@@ -107,6 +124,13 @@ namespace E_Shopper_UI.Controllers
         {
             await _signInManager.SignOutAsync();
 
+            TempData.Put("message", new ResultMessage()
+            {
+                Title = "Oturum Kapatıldı.",
+                Message = "Hesabınız güvenli bir şekilde kapatıldı.",
+                Css = "warning"
+            });
+
             return Redirect("~/");
         }
 
@@ -114,8 +138,15 @@ namespace E_Shopper_UI.Controllers
         {
             if(userId == null || token == null)
             {
-                TempData["message"] = "Geçersiz Token";
-                return View();
+
+                TempData.Put("message", new ResultMessage()
+                {
+                    Title = "Hesap Onayı",
+                    Message = "Hesap onayı için bilgileriniz hatalı.",
+                    Css = "danger"
+                });
+
+                return Redirect("~/");
             }
 
             var user = await _userManager.FindByIdAsync(userId);
@@ -124,15 +155,114 @@ namespace E_Shopper_UI.Controllers
                 var result = await _userManager.ConfirmEmailAsync(user, token);
                 if (result.Succeeded) //success
                 {
-                    TempData["message"] = "Hesabınız onaylandı";
-                    return View();
+                    TempData.Put("message", new ResultMessage()
+                    {
+                        Title = "Hesap Onayı",
+                        Message = "Hesabınız başarıyla aktifleştirilmiştir.",
+                        Css = "success"
+                    });
+
+                    return RedirectToAction("login");
                 }
             }
 
-            TempData["message"] = "Hesabınız onaylanmadı";
-            return Redirect("~/");
+            TempData.Put("message", new ResultMessage()
+            {
+                Title = "Hesap Onayı",
+                Message = "Hesap aktifleştirilemedi.",
+                Css = "danger"
+            });
+            return View();
         }
 
+        public IActionResult ForgotPassword()
+        {
+            return View();
+        }
 
+        [HttpPost]
+        public async Task<IActionResult> ForgotPassword(string Email)
+        {
+            if (string.IsNullOrEmpty(Email))
+            {
+
+                TempData.Put("message", new ResultMessage()
+                {
+                    Title = "Forgot Password",
+                    Message = "Bilgileriniz Hatalı",
+                    Css = "danger"
+                });
+                return View();
+            }
+
+            var user = await _userManager.FindByEmailAsync(Email);
+
+            if (user == null)
+            {
+                TempData.Put("message", new ResultMessage()
+                {
+                    Title = "Forgot Password",
+                    Message = "Email adresi ile kullanıcı bulunamadı.",
+                    Css = "danger"
+                });
+                return View();
+            }
+
+            var code = await _userManager.GeneratePasswordResetTokenAsync(user);
+
+            var callbackUrl = Url.Action("ResetPassword", "Account", new
+            {
+                token = code
+            });
+
+
+            string Uri = "https://localhost:44386";
+            string body = $"Parolanızı yenilemek için linke <a href='{Uri}{callbackUrl}'> tıklayınız.</a>";
+            MailHelper.SendMail(body, Email, "EShopper Şifre Resetleme");
+
+            TempData.Put("message", new ResultMessage()
+            {
+                Title = "Forgot Password",
+                Message = "Şifre yenilemek için hesabınıza mail gönderildi.",
+                Css = "warning"
+            });
+
+
+            return RedirectToAction("login", "Account");
+
+        }
+
+        public IActionResult ResetPassword(string token)
+        {
+            if (token == null)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
+            var model = new ResetPasswordModel { Token = token };
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ResetPassword(ResetPasswordModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+            var user = await _userManager.FindByEmailAsync(model.Email);
+
+            if (user == null)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            var result = await _userManager.ResetPasswordAsync(user, model.Token, model.Password);
+            if (result.Succeeded)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
+            return View(model);
+        }
     }
 }

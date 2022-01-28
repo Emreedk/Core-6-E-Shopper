@@ -2,9 +2,11 @@ using E_Shopper_Business.Abstract;
 using E_Shopper_Business.Concrete;
 using E_Shopper_DataAccess.Abstract;
 using E_Shopper_DataAccess.Concrete.EfCore;
+using E_Shopper_UI.EmailServices;
 using E_Shopper_UI.Identity;
 using E_Shopper_UI.Middlewares;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,7 +14,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddDbContext<ApplicationIdentityDbContext>(options => 
-options.UseSqlServer(@"Server=DESKTOP-E60EAS5\EMREDK;Database=EShopper;uid=sa;pwd=5299"));
+options.UseSqlServer(builder.Configuration.GetConnectionString("IdentityConnection")));
 
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
     .AddEntityFrameworkStores<ApplicationIdentityDbContext>()
@@ -62,6 +64,8 @@ builder.Services.AddScoped<IProductDal, EfCoreProductDal>();
 builder.Services.AddScoped<ICategoryDal, EfCoreCategoryDal>();
 builder.Services.AddScoped<IProductService, ProductManager>();
 builder.Services.AddScoped<ICategoryService, CategoryManager>();
+
+builder.Services.AddTransient<IEmailSender,EmailSender>();
 
 //MVC Mimarisini Tanýmladým.
 //builder.Services.AddMvc().SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Latest);

@@ -19,12 +19,20 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDb25maXJtRW1haWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/emree/Desktop/E_Shopper_Core_6/E_Shopper/E_Shopper_UI/Views/Account/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/emree/Desktop/E_Shopper_Core_6/E_Shopper/E_Shopper_UI/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/emree/Desktop/E_Shopper_Core_6/E_Shopper/E_Shopper_UI/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emree/Desktop/E_Shopper_Core_6/E_Shopper/E_Shopper_UI/Views/Account/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/emree/Desktop/E_Shopper_Core_6/E_Shopper/E_Shopper_UI/Views/Admin/CategoryList.cshtml]
@@ -73,6 +81,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/emree/Desktop/E_Shopper_Core_6/E_Shopper/E_Shopper_UI/Views/Shared/_product.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9wcm9kdWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/emree/Desktop/E_Shopper_Core_6/E_Shopper/E_Shopper_UI/Views/Shared/_resultmessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9yZXN1bHRtZXNzYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/emree/Desktop/E_Shopper_Core_6/E_Shopper/E_Shopper_UI/Views/Shared/_slider.cshtml]

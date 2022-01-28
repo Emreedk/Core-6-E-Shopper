@@ -273,3 +273,8 @@ C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_UI\bin\Debug\net6.0\
 C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_UI\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_UI\bin\Debug\net6.0\runtimes\win-arm\lib\net6.0\dotnet-aspnet-codegenerator-design.exe
 C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_UI\bin\Debug\net6.0\runtimes\win-arm64\lib\net6.0\dotnet-aspnet-codegenerator-design.exe
+C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_UI\obj\Debug\net6.0\E_Shopper_UI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_UI\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.UI.dll
+C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_UI\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Embedded.dll
+C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_UI\bin\Debug\net6.0\SendGrid.dll
+C:\Users\emree\Desktop\E_Shopper_Core_6\E_Shopper\E_Shopper_UI\bin\Debug\net6.0\StarkbankEcdsa.dll
